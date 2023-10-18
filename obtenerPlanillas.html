@@ -23,7 +23,7 @@
     <script src="./jquery/JQuery-3.5.1.js"></script>
 
     <link rel="stylesheet" href="css/styles.css">
-    <title>Listado Estudiantes</title>
+    <title>Listado de Planillas</title>
 </head>
 
 <body>
@@ -43,21 +43,16 @@
 
         <div class="row mt-2">
             <div class="col">
-                <div class="alert alert-primary mt-3 role='alert">
-                    ¡Clickea el <strong>CTA</strong> del estudiante para modificar!
-                </div>
                 <div class="table-responsive">
                     <table class="table table-striped 
                             table-hover table-sm">
                         <thead>
                             <tr class="table-dark">
-                                <th>CTA</th>
-                                <th>CARRERA</th>
-                                <th>ESTATUS_VOTO</th>
-                                <th>NOMBRES</th>
-                                <th>APELLIDOS</th>
-                                <th>EMAIL</th>
-                                <th>PERFIL</th>
+                                <th>CTA REPRESENTANTE</th>
+                                <th>NOMBRE REPRESENTANTE</th>
+                                <th>ID PLANILLA</th>
+                                <th>NOMBRE PLANILLA</th>
+                                <th>VOTOS</th>
                             </tr>
                         </thead>
                         <tbody id="table-body">
@@ -68,7 +63,7 @@
         </div>
     </div>
 
-    <script src="./js/obtener_estudiatnes.js"></script>
+    <script src="./js/obtenerPlanillas.js"></script>
 </body>
 
 </html>

@@ -1,10 +1,10 @@
+
+
 let estudiantes = [];
-
-
 fetch('http://localhost:8080/estudiante/obtenerEstudiantes')
     .then(res => res.json())
     .then(data => {
-        estudiantes = data;
+      estudiantes = data;
         mostrarEstudiantes(data);
     })
 

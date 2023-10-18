@@ -31,6 +31,8 @@
                     <li><a href="registrarDatos.html" class="nav-link">Inicio</a></li>
                     <li><a href="obtenerEstudiantes.html" class="nav-link">Listar Estudiantes</a></li>
                     <li><a href="registrarPlanilla.html" class="nav-link">Registrar Planilla</a></li>
+                    <li><a href="obtenerPlanillas.html" class="nav-link">Listar Planillas</a></li>
+                    <li><a href="votarEtapa1.html" class="nav-link">Votar</a></li>
                 </ul>
             </div>
         </div>
@@ -49,7 +51,29 @@
 
                 </form>
             </div>
+
+            <div class="col-7">
+                <div class="alert alert-primary mt-3 role='alert">
+                    ¡Copia y pega <strong>Número de cuenta</strong> del estudiante que será representante!
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped 
+                            table-hover table-sm">
+                        <thead>
+                            <tr class="table-dark">
+                                <th>CTA</th>
+                                <th>NOMBRES</th>
+                                <th>PERFIL</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
+
+
     </div>
 
     <script src="./js/registrarPlanilla.js"></script>

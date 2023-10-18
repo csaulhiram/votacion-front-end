@@ -44,22 +44,37 @@ formularioEstudiante.addEventListener("submit", (e) => {
 
 
 eliminarUsuario.addEventListener("click", () => {
+    // para planillas
+    let estudiante_cta = new URLSearchParams({
+        "estudiante_cta": localStorage.getItem('cta')
+    });
 
-    let cta = new URLSearchParams({
+    // para estudiante
+    let id = new URLSearchParams({
         "id": localStorage.getItem('cta')
     });
 
-
-
-    // Elimina de la tabla estudiante
-    fetch('http://localhost:8080/estudiante/eliminarEstudiante', {
+    // Elimina un registro estudiante y sus planillas si es que tiene.
+    fetch('http://localhost:8080/planillas/elimnarPlanilla', {
         method: "DELETE",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
-        body: cta,
+        body: estudiante_cta,
     })
-    .then(res => {
-        location.href = "../obtenerEstudiantes.html";
-    })
+        .then(res => {
+            console.log(res);
+            fetch('http://localhost:8080/estudiante/eliminarEstudiante', {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                },
+                body: id,
+            })
+                .then(res => {
+                    console.log(res);
+                    localStorage.clear();
+                    location.href = "../obtenerEstudiantes.html";
+                })
+        })
 })
